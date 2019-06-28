@@ -38,7 +38,7 @@ def get_password_strength(password: str):
                                 'password_contains_lower_case ': check_strings_for_occurrence(password, string.ascii_lowercase),
                                 'password_contains_punctuation ': check_strings_for_occurrence(password, string.punctuation)}
     for key, flag in password_characteristics.items():
-        strength_counter = strength_counter+1 if flag is True else strength_counter
+        strength_counter = strength_counter + 1 if flag is True else strength_counter
     password_not_in_most_common_passwords = check_word_not_in_most_common_password_list(password)
     if password_not_in_most_common_passwords is True:
         strength_counter = strength_counter + 6
@@ -60,7 +60,7 @@ def check_strings_for_occurrence(string_1: str,
                                  string_2: str):
     assert type(string_1) == str and type(string_2) == str, 'Type of parameter is not a string'
     diff_list = [x for x in list(string_1) if x in list(string_2)]
-    if len(diff_list) > 0:
+    if diff_list:
         return True
     else:
         return False
