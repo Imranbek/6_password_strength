@@ -5,12 +5,12 @@ import string
 
 def main():
     password = get_user_password()
-    print('The strength of your password is {}'.format(get_password_strength(password)))
+    print('\nThe strength of your password: {}'.format(get_password_strength(password)))
     gc.collect()
 
 
 def get_user_password():
-    print('Please enter your password for check\n')
+    print('Please enter your password for check and press Enter')
     attempts_limit = 15
 
     for _ in range(attempts_limit):
