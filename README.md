@@ -1,27 +1,31 @@
 # Password Strength Calculator
 
-This script calculate the strength of your password.
+данный скрипт позволяет вычислить надежность вашего пароля и показывает, находится ли ваш пароль в списке наиболее часто используемых паролей.
 
-# Quickstart
+# Запуск скрипта
 
-For start script you need to install Python 3.5+ on your machine and run the script in console/terminal.
-
-How to run script on Linux/Windows:
+Для запуска скрипта вам необходимо установить Python 3.5+, в консоли зайти в корневую папку со скриптом и запустить скрипт,
+прописав следующую строку (Linux/Windows)
 
 ```bash
-
-$ python password_strength.py # possibly requires call of python3 executive instead of just python
-
+$ python password_strength.py 
 ```
-After running you should follow the instructions on your screen and enter your password and press Enter.
-
-
-# Output example:
+# Пример вывода:
 ```
-The strength of your password: 1
+The strength of your password: 1.5
 ```
 
+ Если помимо надежности пароля вы ходите узнать о включении его в список самых распросраненных паролей, то строка для запуска должна выглядеть так:
+```bash
+$ python password_strength.py {путь до файла с паролями} 
+```
+# Пример вывода:
+```
+The strength of your password: 1.0
+Your password included in most common passwords list.
+```
 
-# Project Goals
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+# Цель проекта
+
+Код написан в целях обучения. Курс ветб-разработки на Python - [DEVMAN.org](https://devman.org)
